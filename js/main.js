@@ -107,9 +107,18 @@ const CONFIG = {
     }, { rootMargin: '-45% 0px -50% 0px' });
     tracked.forEach((s) => spy.observe(s));
   }
+  // No fim da página (rodapé), a última seção do menu fica ativa
+  window.addEventListener('scroll', () => {
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
+    if (atBottom) setActive('contato');
+  }, { passive: true });
 
   /* ---------- Revelação suave na rolagem (uma única vez) ---------- */
-  const reveals = document.querySelectorAll('.reveal');
+  // Grupos em cascata: cada filho recebe seu índice (--i) para o atraso
+  document.querySelectorAll('.stagger').forEach((group) => {
+    [...group.children].forEach((child, i) => child.style.setProperty('--i', i));
+  });
+  const reveals = document.querySelectorAll('.reveal, .stagger');
   if (reduceMotion || !('IntersectionObserver' in window)) {
     reveals.forEach((el) => el.classList.add('is-visible'));
   } else {
@@ -232,6 +241,22 @@ const CONFIG = {
       form.reset();
       Object.values(fields).forEach((el) => el.removeAttribute('aria-invalid'));
     });
+  }
+
+  /* ---------- Barra de progresso de leitura ---------- */
+  const bar = document.querySelector(".scroll-progress");
+  if (bar) {
+    let ticking = false;
+    const paint = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+      ticking = false;
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(paint); }
+    }, { passive: true });
+    window.addEventListener("resize", paint);
+    paint();
   }
 
   /* ---------- Ano atual no rodapé ---------- */
