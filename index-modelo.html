@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- MODELO COM MARCADORES [PREENCHER] — versão para cliente real. Ao usar, renomeie para index.html. -->
+  <meta name="robots" content="noindex">
+
+  <!-- =========================================================
+       SEO
+       Substitua todos os [PREENCHER]. Se a cidade não for
+       informada, remova "em [cidade]" do título e da descrição.
+       ========================================================= -->
+  <title>[PREENCHER: Nome] | Nutricionista em [PREENCHER: Cidade]</title>
+  <meta name="description" content="[PREENCHER: Nome], nutricionista (CRN-[PREENCHER]) em [PREENCHER: Cidade]. Atendimento nutricional individualizado, que considera sua rotina, suas necessidades e seus objetivos.">
+  <link rel="canonical" href="https://[PREENCHER: dominio]/">
+  <meta name="theme-color" content="#FAF9F5">
+
+  <!-- Open Graph / Twitter — imagem: foto real da profissional, 1200x630 [PREENCHER: foto] -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="[PREENCHER: Nome] — Nutricionista">
+  <meta property="og:title" content="[PREENCHER: Nome] | Nutricionista em [PREENCHER: Cidade]">
+  <meta property="og:description" content="Atendimento nutricional individualizado, que considera sua rotina, suas necessidades e seus objetivos.">
+  <meta property="og:url" content="https://[PREENCHER: dominio]/">
+  <meta property="og:image" content="https://[PREENCHER: dominio]/img/og-profissional.jpg">
+  <meta property="og:image:alt" content="Foto de [PREENCHER: Nome], nutricionista">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[PREENCHER: Nome] | Nutricionista">
+  <meta name="twitter:description" content="Atendimento nutricional individualizado, que considera sua rotina, suas necessidades e seus objetivos.">
+  <meta name="twitter:image" content="https://[PREENCHER: dominio]/img/og-profissional.jpg">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fotos de EXEMPLO servidas pelo Unsplash (licença gratuita). Ao trocar pelas fotos reais em img/, remova este preconnect. -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <!-- Fontes: Fraunces (títulos) + Manrope (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Dados estruturados: Person. Preencha apenas com dados reais. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://[PREENCHER: dominio]/#profissional",
+    "name": "[PREENCHER: Nome completo]",
+    "jobTitle": "Nutricionista",
+    "url": "https://[PREENCHER: dominio]/",
+    "image": "https://[PREENCHER: dominio]/img/og-profissional.jpg",
+    "sameAs": ["https://www.instagram.com/[PREENCHER: usuario]"],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Registro profissional",
+      "name": "CRN-[PREENCHER: região e número]"
+    }
+  }
+  </script>
+  <!-- Dados estruturados: consultório. REMOVA este bloco se não houver atendimento presencial. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "[PREENCHER: Nome] — Nutricionista",
+    "url": "https://[PREENCHER: dominio]/",
+    "telephone": "+55[PREENCHER: DDD+numero]",
+    "founder": { "@id": "https://[PREENCHER: dominio]/#profissional" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[PREENCHER: rua e número]",
+      "addressLocality": "[PREENCHER: cidade]",
+      "addressRegion": "[PREENCHER: UF]",
+      "postalCode": "[PREENCHER: CEP]",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- =========================================================
+       ÍCONES (traço fino, base Lucide) + ramo decorativo
+       ========================================================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+      <symbol id="i-grad" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+      <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+      <symbol id="ramo" viewBox="0 0 120 200"><path d="M60 196C58 150 62 100 72 8"/><path d="M61 162c-21-9-33-27-31-48 18 6 30 24 31 48Z"/><path d="M62 128c20-7 32-25 30-46-18 6-29 24-30 46Z"/><path d="M64 94c-18-8-26-26-22-44 16 8 24 24 22 44Z"/><path d="M68 60c15-8 21-22 19-38-13 8-20 22-19 38Z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- =========================================================
+       HEADER E NAVEGAÇÃO
+       ========================================================= -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-name"><span class="fill">[PREENCHER: Nome]</span></span>
+        <span class="brand-role">Nutricionista</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <div class="nav-backdrop" data-nav-close></div>
+        <div class="nav-panel" id="nav-panel">
+          <div class="nav-panel-head">
+            <span class="brand-name"><span class="fill">[PREENCHER: Nome]</span></span>
+            <button class="icon-btn nav-close" type="button" aria-label="Fechar menu" data-nav-close>
+              <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+            </button>
+          </div>
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#inicio">Início</a></li>
+            <li><a class="nav-link" href="#sobre">Sobre mim</a></li>
+            <li><a class="nav-link" href="#atendimentos">Atendimentos</a></li>
+            <li><a class="nav-link" href="#abordagem">Minha abordagem</a></li>
+            <li><a class="nav-link" href="#faq">Perguntas frequentes</a></li>
+            <li><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+          <div class="nav-extras">
+            <a class="btn btn-primary btn-block" href="#contato" data-wa>Agende sua consulta</a>
+            <ul class="social" aria-label="Contatos">
+              <li><a class="icon-btn" href="#contato" data-wa aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+              <li><a class="icon-btn" href="https://www.instagram.com/[PREENCHER: usuario]" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+              <li><a class="icon-btn" href="mailto:[PREENCHER: email]" aria-label="E-mail"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="#contato" data-wa>Agende sua consulta</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Abrir menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- =========================================================
+         HERO — apresentação com a foto da profissional
+         ========================================================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Nutrição <span aria-hidden="true">|</span> Saúde <span aria-hidden="true">|</span> Bem-estar</p>
+          <h1 class="hero-title" id="hero-titulo">Uma relação mais equilibrada com a alimentação começa com <em>escolhas conscientes.</em></h1>
+          <p class="hero-lead">Conheça uma abordagem nutricional individualizada, que considera sua rotina, suas necessidades e seus objetivos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contato" data-wa>Agende sua consulta</a>
+            <a class="btn btn-outline" href="#sobre">Conheça meu trabalho</a>
+          </div>
+          <p class="hero-cred">
+            <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
+            <span><span class="fill">[PREENCHER: Nome]</span> <span class="sep" aria-hidden="true">|</span> Nutricionista <span class="sep" aria-hidden="true">|</span> CRN-<span class="fill">[PREENCHER]</span></span>
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-frame">
+            <div class="hero-arch" aria-hidden="true"></div>
+            <svg class="ramo hero-ramo" aria-hidden="true"><use href="#ramo"/></svg>
+            <figure class="hero-photo">
+              <picture>
+                <!-- [PREENCHER: foto] Substitua pelos arquivos reais (preferência: foto vertical, rosto e ombros), ex.:
+                <source type="image/avif" srcset="img/hero-480.avif 480w, img/hero-800.avif 800w, img/hero-1200.avif 1200w" sizes="(min-width: 1024px) 38vw, 80vw">
+                <source type="image/webp" srcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w" sizes="(min-width: 1024px) 38vw, 80vw">
+                -->
+                <!-- FOTO DE EXEMPLO (Unsplash) — substituir pela foto real da profissional [PREENCHER: foto] -->
+                <img src="https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=800&h=1000" srcset="https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=480&ar=4:5 480w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=800&ar=4:5 800w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=1200&ar=4:5 1200w" sizes="(min-width: 1024px) 544px, 76vw" width="800" height="1000" fetchpriority="high" alt="Foto de [PREENCHER: Nome], nutricionista">
+              </picture>
+            </figure>
+            <!-- Imagem pequena de alimento (opcional) [PREENCHER: foto] -->
+            <div class="hero-bowl" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=300&h=300" srcset="https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=300&h=300 300w, https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=600&h=600 600w" sizes="160px" width="300" height="300" alt="">
+            </div>
+            <div class="hero-card">
+              <span class="hero-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+              <span class="hero-card-text">
+                <strong><span class="fill">[PREENCHER: Nome]</span></strong>
+                <small>Nutricionista | CRN-<span class="fill">[PREENCHER]</span></small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SOBRE MIM
+         ========================================================= -->
+    <section class="section about" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-shape" aria-hidden="true"></div>
+          <figure class="arch-frame">
+            <!-- [PREENCHER: foto] Use uma foto diferente da do hero -->
+            <!-- FOTO DE EXEMPLO (Unsplash) — substituir -->
+            <img src="https://images.unsplash.com/photo-1706565029539-d09af5896340?auto=format&fit=crop&q=70&w=800&h=1000" srcset="https://images.unsplash.com/photo-1706565029539-d09af5896340?auto=format&fit=crop&q=70&w=480&ar=4:5 480w, https://images.unsplash.com/photo-1706565029539-d09af5896340?auto=format&fit=crop&q=70&w=800&ar=4:5 800w, https://images.unsplash.com/photo-1706565029539-d09af5896340?auto=format&fit=crop&q=70&w=1200&ar=4:5 1200w" sizes="(min-width: 1024px) 34vw, 90vw" width="800" height="1000" loading="lazy" alt="Foto de [PREENCHER: Nome], nutricionista">
+          </figure>
+          <svg class="ramo about-ramo" aria-hidden="true"><use href="#ramo"/></svg>
+        </div>
+
+        <div class="about-text">
+          <p class="eyebrow">Sobre mim</p>
+          <h2 class="h2" id="sobre-titulo">Prazer, sou <span class="fill">[PREENCHER: Nome]</span>.</h2>
+          <div class="prose">
+            <p><span class="fill">[PREENCHER: apresentação profissional em primeira pessoa — 2 ou 3 parágrafos curtos, em tom próximo e humano: quem sou, por que escolhi a Nutrição e como gosto de atender.]</span></p>
+          </div>
+
+          <blockquote class="quote">
+            <p><span class="fill">[PREENCHER: frase que resume a filosofia de trabalho]</span></p>
+          </blockquote>
+
+          <!-- Qualificações: somente dados reais. Duplique o <li> para novos itens. -->
+          <ul class="quals">
+            <li>
+              <span class="qual-icon"><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg></span>
+              <div>
+                <h3>Formação acadêmica</h3>
+                <p><span class="fill">[PREENCHER: curso, instituição e ano de conclusão]</span></p>
+              </div>
+            </li>
+            <li>
+              <span class="qual-icon"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></span>
+              <div>
+                <h3>Pós-graduações e especializações</h3>
+                <p><span class="fill">[PREENCHER: título, instituição e ano]</span></p>
+              </div>
+            </li>
+            <li>
+              <span class="qual-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+              <div>
+                <h3>Cursos e qualificações</h3>
+                <p><span class="fill">[PREENCHER: cursos relevantes]</span></p>
+              </div>
+            </li>
+            <li>
+              <span class="qual-icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+              <div>
+                <h3>Experiência profissional</h3>
+                <p><span class="fill">[PREENCHER: experiência profissional]</span></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ÁREAS DE ATUAÇÃO
+         Use somente as áreas em que a profissional atua de fato.
+         Exemplos possíveis: nutrição clínica, esportiva, reeducação
+         alimentar, saúde da mulher, infantil, comportamento alimentar.
+         Duplique ou remova os <li>.
+         ========================================================= -->
+    <section class="section section--tint" id="areas" aria-labelledby="areas-titulo">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Áreas de atuação</p>
+          <h2 class="h2" id="areas-titulo">Em que posso te ajudar</h2>
+          <p class="section-lead">Cada área é conduzida com o mesmo cuidado: entender sua história antes de qualquer orientação.</p>
+        </div>
+        <ul class="areas">
+          <li class="area-card">
+            <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg></span>
+            <h3><span class="fill">[PREENCHER: área de atuação]</span></h3>
+            <p><span class="fill">[PREENCHER: descrição curta, em uma ou duas frases]</span></p>
+          </li>
+          <li class="area-card">
+            <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3><span class="fill">[PREENCHER: área de atuação]</span></h3>
+            <p><span class="fill">[PREENCHER: descrição curta, em uma ou duas frases]</span></p>
+          </li>
+          <li class="area-card">
+            <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <h3><span class="fill">[PREENCHER: área de atuação]</span></h3>
+            <p><span class="fill">[PREENCHER: descrição curta, em uma ou duas frases]</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVIÇOS E MODALIDADES
+         Não inventar serviços, durações ou condições.
+         Não exibir valores, descontos ou pacotes.
+         ========================================================= -->
+    <section class="section" id="atendimentos" aria-labelledby="atend-titulo">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Atendimentos</p>
+            <h2 class="h2" id="atend-titulo">Como posso te acompanhar</h2>
+          </div>
+          <!-- Modalidades: mantenha apenas as reais (presencial / online) -->
+          <ul class="modes" aria-label="Modalidades de atendimento">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span class="fill">[PREENCHER: Presencial em cidade/bairro]</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg> <span class="fill">[PREENCHER: Online]</span></li>
+          </ul>
+        </div>
+
+        <div class="services">
+          <!-- Serviço 1 -->
+          <article class="service-card">
+            <figure class="service-img">
+              <img src="https://images.unsplash.com/photo-1546552916-985b466ffbec?auto=format&fit=crop&q=70&w=800&h=500" srcset="https://images.unsplash.com/photo-1546552916-985b466ffbec?auto=format&fit=crop&q=70&w=480&ar=16:10 480w, https://images.unsplash.com/photo-1546552916-985b466ffbec?auto=format&fit=crop&q=70&w=800&ar=16:10 800w, https://images.unsplash.com/photo-1546552916-985b466ffbec?auto=format&fit=crop&q=70&w=1200&ar=16:10 1200w" sizes="(min-width: 768px) 46vw, 92vw" width="1200" height="750" loading="lazy" alt="Mãos cortando repolho roxo sobre a bancada [FOTO DE EXEMPLO]">
+            </figure>
+            <div class="service-body">
+              <h3><span class="fill">[PREENCHER: nome do serviço, ex.: consulta nutricional]</span></h3>
+              <p><span class="fill">[PREENCHER: descrição do serviço]</span></p>
+              <dl class="service-info">
+                <div><dt>Para quem é indicado</dt><dd><span class="fill">[PREENCHER]</span></dd></div>
+                <div><dt>Como funciona</dt><dd><span class="fill">[PREENCHER: resumo do formato]</span></dd></div>
+              </dl>
+              <a class="btn btn-outline" href="#contato" data-wa data-servico="[PREENCHER: nome do serviço 1]">Solicitar informações</a>
+            </div>
+          </article>
+
+          <!-- Serviço 2 -->
+          <article class="service-card">
+            <figure class="service-img">
+              <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&q=70&w=800&h=500" srcset="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&q=70&w=480&ar=16:10 480w, https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&q=70&w=800&ar=16:10 800w, https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&q=70&w=1200&ar=16:10 1200w" sizes="(min-width: 768px) 46vw, 92vw" width="1200" height="750" loading="lazy" alt="Salada em camadas em pote de vidro [FOTO DE EXEMPLO]">
+            </figure>
+            <div class="service-body">
+              <h3><span class="fill">[PREENCHER: nome do serviço, ex.: acompanhamento nutricional]</span></h3>
+              <p><span class="fill">[PREENCHER: descrição do serviço]</span></p>
+              <dl class="service-info">
+                <div><dt>Para quem é indicado</dt><dd><span class="fill">[PREENCHER]</span></dd></div>
+                <div><dt>Como funciona</dt><dd><span class="fill">[PREENCHER: resumo do formato]</span></dd></div>
+              </dl>
+              <a class="btn btn-outline" href="#contato" data-wa data-servico="[PREENCHER: nome do serviço 2]">Solicitar informações</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         MINHA ABORDAGEM
+         ========================================================= -->
+    <section class="section section--bege" id="abordagem" aria-labelledby="abord-titulo">
+      <div class="container approach-grid">
+        <div class="approach-text">
+          <p class="eyebrow">Minha abordagem</p>
+          <h2 class="h2" id="abord-titulo">Cada pessoa possui uma história, uma rotina e <em>necessidades diferentes.</em></h2>
+          <p class="section-lead">Por isso, o atendimento parte da escuta: as orientações são construídas a partir do seu contexto, e não de um modelo pronto.</p>
+          <ul class="pillars">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><div><h3>Atendimento individualizado</h3><p>Orientações pensadas para a sua realidade.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg><div><h3>Escuta e acolhimento</h3><p>Espaço respeitoso para falar sobre sua relação com a comida.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg><div><h3>Fundamentação científica</h3><p>Orientações baseadas na ciência da Nutrição.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Sua rotina em consideração</h3><p>Horários, preferências e necessidades fazem parte do planejamento.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg><div><h3>Acompanhamento possível</h3><p>Ajustes adequados à realidade de cada pessoa.</p></div></li>
+          </ul>
+        </div>
+        <div class="approach-media reveal">
+          <figure class="approach-frame">
+            <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=70&w=900&h=1125" srcset="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=70&w=480&ar=4:5 480w, https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=70&w=900&ar=4:5 900w, https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=70&w=1200&ar=4:5 1200w" sizes="(min-width: 1024px) 34vw, 92vw" width="900" height="1125" loading="lazy" alt="Verduras e legumes verdes organizados sobre fundo claro [FOTO DE EXEMPLO]">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         COMO FUNCIONA O ATENDIMENTO
+         ========================================================= -->
+    <section class="section" id="como-funciona" aria-labelledby="etapas-titulo">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Passo a passo</p>
+          <h2 class="h2" id="etapas-titulo">Como funciona o atendimento</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">01</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>
+            <h3>Primeiro contato</h3>
+            <p>Você conhece as opções de atendimento e solicita informações pelo WhatsApp ou pelo formulário.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">02</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+            <h3>Consulta nutricional</h3>
+            <p><span class="fill">[PREENCHER: como funciona o primeiro encontro, conforme o método da profissional]</span></p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">03</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg>
+            <h3>Planejamento individualizado</h3>
+            <p><span class="fill">[PREENCHER: como as orientações são construídas]</span></p>
+          </li>
+          <!-- Etapa 04: mantenha somente se o acompanhamento for oferecido -->
+          <li class="step">
+            <span class="step-num" aria-hidden="true">04</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>
+            <h3>Acompanhamento</h3>
+            <p><span class="fill">[PREENCHER: como funciona a continuidade]</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTEÚDOS E ORIENTAÇÕES (OPCIONAL)
+         Para ocultar a seção inteira, adicione o atributo "hidden"
+         na tag <section> abaixo.
+         Os cartões são EXEMPLOS: os conteúdos finais devem ser
+         escritos ou revisados pela profissional, com fontes confiáveis.
+         ========================================================= -->
+    <section class="section section--tint" id="conteudos" aria-labelledby="cont-titulo">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Conteúdos</p>
+          <h2 class="h2" id="cont-titulo">Leituras para o dia a dia</h2>
+        </div>
+        <div class="posts">
+          <article class="post-card">
+            <figure class="post-img"><img src="https://images.unsplash.com/photo-1767277672167-18105701959b?auto=format&fit=crop&q=70&w=600&h=400" srcset="https://images.unsplash.com/photo-1767277672167-18105701959b?auto=format&fit=crop&q=70&w=400&ar=3:2 400w, https://images.unsplash.com/photo-1767277672167-18105701959b?auto=format&fit=crop&q=70&w=600&ar=3:2 600w, https://images.unsplash.com/photo-1767277672167-18105701959b?auto=format&fit=crop&q=70&w=900&ar=3:2 900w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="900" height="600" loading="lazy" alt="Mesa com tigelas e pratos de café da manhã [IMAGEM DE EXEMPLO]"></figure>
+            <div class="post-body">
+              <p class="post-flag">[CONTEÚDO DE EXEMPLO, substituir]</p>
+              <p class="post-cat">Rotina</p>
+              <h3>Organização da rotina alimentar</h3>
+              <p>[CONTEÚDO DE EXEMPLO, substituir pelo resumo do texto da profissional.]</p>
+              <a class="text-link" href="#conteudos">Ler conteúdo<span class="sr-only">: Organização da rotina alimentar</span></a>
+            </div>
+          </article>
+          <article class="post-card">
+            <figure class="post-img"><img src="https://images.unsplash.com/photo-1546913830-dab67cd3d3d8?auto=format&fit=crop&q=70&w=600&h=400" srcset="https://images.unsplash.com/photo-1546913830-dab67cd3d3d8?auto=format&fit=crop&q=70&w=400&ar=3:2 400w, https://images.unsplash.com/photo-1546913830-dab67cd3d3d8?auto=format&fit=crop&q=70&w=600&ar=3:2 600w, https://images.unsplash.com/photo-1546913830-dab67cd3d3d8?auto=format&fit=crop&q=70&w=900&ar=3:2 900w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="900" height="600" loading="lazy" alt="Salada servida em tigela [IMAGEM DE EXEMPLO]"></figure>
+            <div class="post-body">
+              <p class="post-flag">[CONTEÚDO DE EXEMPLO, substituir]</p>
+              <p class="post-cat">Compras</p>
+              <h3>Leitura de rótulos</h3>
+              <p>[CONTEÚDO DE EXEMPLO, substituir pelo resumo do texto da profissional.]</p>
+              <a class="text-link" href="#conteudos">Ler conteúdo<span class="sr-only">: Leitura de rótulos</span></a>
+            </div>
+          </article>
+          <article class="post-card">
+            <figure class="post-img"><img src="https://images.unsplash.com/photo-1760533535534-c69f637df2e6?auto=format&fit=crop&q=70&w=600&h=400" srcset="https://images.unsplash.com/photo-1760533535534-c69f637df2e6?auto=format&fit=crop&q=70&w=400&ar=3:2 400w, https://images.unsplash.com/photo-1760533535534-c69f637df2e6?auto=format&fit=crop&q=70&w=600&ar=3:2 600w, https://images.unsplash.com/photo-1760533535534-c69f637df2e6?auto=format&fit=crop&q=70&w=900&ar=3:2 900w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="900" height="600" loading="lazy" alt="Granola com iogurte e frutas [IMAGEM DE EXEMPLO]"></figure>
+            <div class="post-body">
+              <p class="post-flag">[CONTEÚDO DE EXEMPLO, substituir]</p>
+              <p class="post-cat">Planejamento</p>
+              <h3>Planejamento de refeições</h3>
+              <p>[CONTEÚDO DE EXEMPLO, substituir pelo resumo do texto da profissional.]</p>
+              <a class="text-link" href="#conteudos">Ler conteúdo<span class="sr-only">: Planejamento de refeições</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PERGUNTAS FREQUENTES
+         Para editar: altere o texto dentro de cada .faq-item.
+         Para adicionar: duplique um .faq-item e troque os ids
+         (faq-q-N / faq-a-N).
+         ========================================================= -->
+    <section class="section" id="faq" aria-labelledby="faq-titulo">
+      <div class="container faq-grid">
+        <div class="faq-aside">
+          <p class="eyebrow">Perguntas frequentes</p>
+          <h2 class="h2" id="faq-titulo">Dúvidas comuns antes da primeira consulta</h2>
+          <p class="section-lead">Não encontrou o que procurava? Mande uma mensagem.</p>
+          <a class="btn btn-outline" href="#contato" data-wa>Falar no WhatsApp</a>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q"><button type="button" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">Como funciona a primeira consulta?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1"><div><p><span class="fill">[PREENCHER: duração aproximada, o que é conversado e o que a pessoa recebe ao final]</span></p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q"><button type="button" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Quais modalidades de atendimento são oferecidas?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2"><div><p><span class="fill">[PREENCHER: presencial, online ou ambas]</span></p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q"><button type="button" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">Como posso agendar uma consulta?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3"><div><p>Pelo WhatsApp ou pelo formulário da seção Contato. <span class="fill">[PREENCHER: detalhes sobre horários e confirmação]</span></p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q"><button type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">O atendimento possui acompanhamento?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4"><div><p><span class="fill">[PREENCHER: como funciona o retorno e a continuidade]</span></p></div></div>
+          </div>
+          <!-- Remova se não houver atendimento presencial -->
+          <div class="faq-item">
+            <h3 class="faq-q"><button type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Onde fica o consultório?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5"><div><p><span class="fill">[PREENCHER: endereço e pontos de referência]</span></p></div></div>
+          </div>
+          <!-- Remova se não houver atendimento online -->
+          <div class="faq-item">
+            <h3 class="faq-q"><button type="button" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">Como funciona o atendimento online?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6"><div><p><span class="fill">[PREENCHER: plataforma usada e como a consulta acontece]</span></p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTATO E AGENDAMENTO
+         ========================================================= -->
+    <section class="section contact" id="contato" aria-labelledby="contato-titulo">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <div class="contact-title">
+            <img class="contact-avatar" src="https://images.unsplash.com/photo-1706565029071-f8f70ce91e71?auto=format&fit=crop&q=70&w=220&h=220&crop=faces" width="160" height="160" loading="lazy" alt="Foto de [PREENCHER: Nome]">
+            <h2 class="h2" id="contato-titulo">Vamos <em>conversar?</em></h2>
+          </div>
+          <p class="contact-lead">Entre em contato para conhecer as possibilidades de atendimento e esclarecer suas dúvidas.</p>
+          <a class="btn btn-primary btn-lg" href="#contato" data-wa>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Conversar pelo WhatsApp
+          </a>
+
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+              <a href="https://www.instagram.com/[PREENCHER: usuario]" target="_blank" rel="noopener">@<span class="fill">[PREENCHER: usuário]</span></a>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+              <a href="mailto:[PREENCHER: email]"><span class="fill">[PREENCHER: e-mail]</span></a>
+            </li>
+            <!-- Endereço: remova se o atendimento for só online -->
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <address><span class="fill">[PREENCHER: endereço do consultório]</span></address>
+            </li>
+          </ul>
+
+          <!-- Mapa: somente se houver atendimento presencial. Descomente e cole o src do Google Maps (Compartilhar > Incorporar).
+          <div class="map">
+            <iframe src="[PREENCHER: URL de incorporação do Google Maps]" title="Mapa com a localização do consultório" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          -->
+        </div>
+
+        <div class="form-card">
+          <!-- Envio: monta a mensagem e abre o WhatsApp (js/main.js).
+               Alternativa Formspree: veja o comentário em js/main.js. [PREENCHER] -->
+          <form class="contact-form" id="form-contato" novalidate>
+            <h3 class="form-title">Envie uma mensagem</h3>
+            <p class="form-hint">Ao enviar, a mensagem abre no WhatsApp para você confirmar.</p>
+
+            <div class="field">
+              <label for="f-nome">Nome</label>
+              <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="e-nome">
+              <p class="field-error" id="e-nome"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-contato">E-mail ou telefone</label>
+              <input id="f-contato" name="contato" type="text" autocomplete="email" inputmode="email" required aria-describedby="e-contato">
+              <p class="field-error" id="e-contato"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-modalidade">Modalidade de interesse</label>
+              <!-- Mantenha apenas as modalidades reais -->
+              <select id="f-modalidade" name="modalidade" required aria-describedby="e-modalidade">
+                <option value="">Selecione</option>
+                <option>[PREENCHER: Presencial]</option>
+                <option>[PREENCHER: Online]</option>
+              </select>
+              <p class="field-error" id="e-modalidade"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-msg">Mensagem <span class="optional">(opcional)</span></label>
+              <textarea id="f-msg" name="mensagem" rows="4"></textarea>
+            </div>
+
+            <p class="form-alert">
+              <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+              <span>Não envie exames, diagnósticos ou outras informações de saúde por este formulário.</span>
+            </p>
+
+            <div class="field field--check">
+              <input id="f-consent" name="consentimento" type="checkbox" required aria-describedby="e-consent">
+              <label for="f-consent">Concordo com o uso dos meus dados para retorno do contato, conforme a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</label>
+              <p class="field-error" id="e-consent"></p>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Enviar mensagem</button>
+            <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-name"><span class="fill">[PREENCHER: Nome completo]</span></p>
+        <p>Nutricionista | CRN-<span class="fill">[PREENCHER: região]</span> <span class="fill">[PREENCHER: número]</span></p>
+        <address class="footer-address"><span class="fill">[PREENCHER: endereço profissional, se aplicável]</span></address>
+      </div>
+      <nav aria-label="Rodapé">
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#atendimentos">Atendimentos</a></li>
+          <li><a href="#abordagem">Minha abordagem</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <ul class="social" aria-label="Contatos">
+        <li><a class="icon-btn" href="https://www.instagram.com/[PREENCHER: usuario]" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a class="icon-btn" href="#contato" data-wa aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+        <li><a class="icon-btn" href="mailto:[PREENCHER: email]" aria-label="E-mail"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+      </ul>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> <span class="fill">[PREENCHER: Nome]</span>. Todos os direitos reservados.</p>
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp (aparece após o hero) -->
+  <a class="wa-float" href="#contato" data-wa aria-label="Conversar pelo WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- [PREENCHER: foto] Foto pequena de alimento (ex.: tigela de salada), recorte circular -->
+  <rect width="300" height="300" fill="#F2EEE6"/>
+  <g fill="none" stroke="#657B68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M66 150h168c0 50-38 86-84 86s-84-36-84-86z"/>
+    <path d="M96 150c8-28 32-42 54-36M150 150c2-28 24-48 48-44"/>
+    <path d="M118 124c-8-20 0-38 18-46 8 18 2 36-18 46z"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <!-- [PREENCHER: foto] Foto complementar natural (alimentos, ambiente, mãos preparando alimentos) -->
+  <rect width="1200" height="900" fill="#ECE6DA"/>
+  <circle cx="930" cy="190" r="260" fill="#E3DBCB"/>
+  <g fill="none" stroke="#657B68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M410 470h380c0 112-85 190-190 190s-190-78-190-190z"/>
+    <path d="M540 700h120"/>
+    <path d="M470 470c18-60 70-92 118-78M600 470c4-62 52-104 104-96M690 470c20-38 58-52 96-40"/>
+    <path d="M520 410c-14-42 0-80 40-98 16 40 4 76-40 98zM640 380c20-40 56-58 98-48-14 42-50 58-98 48z"/>
+  </g>
+  <text x="600" y="790" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="40" fill="#4F6352">Imagem do conteúdo</text>
+  <text x="600" y="838" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" letter-spacing="4" fill="#6E675B">[PREENCHER: FOTO]</text>
+</svg>
