@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const PAGES = ['index.html', 'index-modelo.html', 'politica-de-privacidade.html'];
+const PAGES = ['index.html', 'index-modelo.html', 'politica-de-privacidade.html', 'artigo-exemplo.html'];
 const START = '<!-- CSS:INICIO (gerado por build.js a partir de css/style.css — não edite aqui) -->';
 const END = '<!-- CSS:FIM -->';
 

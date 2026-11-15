@@ -132,6 +132,25 @@ const CONFIG = {
     reveals.forEach((el) => io.observe(el));
   }
 
+  /* ---------- Horário: aviso "Atendendo agora" (horário de Brasília) ---------- */
+  document.querySelectorAll('.hours[data-dias][data-horas]').forEach((li) => {
+    const out = li.querySelector('.open-status');
+    if (!out) return;
+    try {
+      const [d1, d2] = li.dataset.dias.split('-').map(Number);
+      const [h1, h2] = li.dataset.horas.split('-').map(Number);
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', hour12: false,
+      }).formatToParts(new Date());
+      const day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[parts.find((p) => p.type === 'weekday').value];
+      const hour = Number(parts.find((p) => p.type === 'hour').value) % 24;
+      const open = day >= d1 && day <= d2 && hour >= h1 && hour < h2;
+      out.textContent = open ? 'Atendendo agora' : 'Retorno no próximo dia útil';
+      out.classList.toggle('is-closed', !open);
+      out.hidden = false;
+    } catch (e) { /* sem suporte a fuso horário: o aviso fica oculto */ }
+  });
+
   /* ---------- Botão flutuante do WhatsApp (após o hero) ---------- */
   const waFloat = document.querySelector('.wa-float');
   const hero = document.querySelector('.hero');
@@ -139,7 +158,21 @@ const CONFIG = {
   if (waFloat && hero && 'IntersectionObserver' in window) {
     let heroVisible = true;
     let contactVisible = false;
-    const update = () => waFloat.classList.toggle('is-visible', !heroVisible && !contactVisible);
+    // Balão "Posso ajudar?": aparece uma única vez por visita, na primeira vez que o botão surge
+    let tipShown = false;
+    try { tipShown = sessionStorage.getItem('waTip') === '1'; } catch (e) { /* armazenamento indisponível */ }
+    const showTip = () => {
+      if (tipShown) return;
+      tipShown = true;
+      try { sessionStorage.setItem('waTip', '1'); } catch (e) { /* ignora */ }
+      setTimeout(() => waFloat.classList.add('show-tip'), 700);
+      setTimeout(() => waFloat.classList.remove('show-tip'), 5200);
+    };
+    const update = () => {
+      const visible = !heroVisible && !contactVisible;
+      waFloat.classList.toggle('is-visible', visible);
+      if (visible) showTip(); else waFloat.classList.remove('show-tip');
+    };
     new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; update(); }, { threshold: .1 }).observe(hero);
     // Oculta na seção de contato, onde o botão principal já está visível
     new IntersectionObserver(([e]) => { contactVisible = e.isIntersecting; update(); }, { threshold: .2 }).observe(contato);

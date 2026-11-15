@@ -57,6 +57,12 @@ As fontes (Fraunces e Manrope, licença OFL) ficam em `fonts/`.
 - [ ] Domínio do site (canonical, Open Graph, dados estruturados)
 - [ ] Revisão da Política de Privacidade (data, CPF/CNPJ se aplicável, prazo de retenção, serviços usados)
 
+- [ ] Anos e marcos da linha do tempo "Formação e trajetória" (Sobre mim)
+- [ ] Dias e horários de atendimento e o atributo do aviso "Atendendo agora" (`data-dias` e `data-horas` no item de horário)
+- [ ] Prazo de resposta exibido abaixo do formulário
+- [ ] Frase sobre o consultório (seção "O consultório") e revisão da frase do manifesto
+- [ ] Itens de "O que levar na primeira consulta", conforme a orientação da profissional
+
 ## Fotos
 
 As fotos atuais são **exemplos** do Unsplash (licença gratuita), servidas direto de `images.unsplash.com`.
@@ -71,6 +77,7 @@ Elas servem só para apresentar o layout. **Antes de publicar, troque todas pela
 | Atendimentos (2) | mãos cortando repolho; salada em pote | fotos complementares naturais, uma por serviço |
 | Minha abordagem | verduras sobre fundo claro | alimentos ou ambiente do consultório, vertical |
 | Conteúdos (3) | tigelas de café da manhã; salada; granola | imagens dos conteúdos reais |
+| O consultório (3) | sala clara, vaso na janela, laranjas | 3 fotos reais do consultório (remova a seção se o atendimento for só online) |
 | Compartilhamento (Open Graph) | — | foto da profissional 1200×630 → `img/og-profissional.jpg` |
 
 Para cada foto real: exporte em WebP/AVIF nos tamanhos 480, 800 e 1200 px de largura, salve em `img/` e use os blocos `<source>` comentados no hero como modelo. Depois, remova o `preconnect` de `images.unsplash.com` no `<head>`.
