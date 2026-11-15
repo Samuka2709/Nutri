@@ -16,6 +16,19 @@ Não publique a demo como se fosse o site de uma profissional real.
 4. Revise a Política de Privacidade: ela está com os dados da demo (nome, CRN, e-mail e o aviso "Site demonstrativo").
 5. Em `js/main.js`, preencha `CONFIG.whatsapp` e `CONFIG.nome`.
 
+
+## Editando o visual (importante)
+
+O CSS fica **embutido** dentro das páginas para o site abrir mais rápido no celular.
+Edite sempre `css/style.css` e depois rode:
+
+```bash
+node build.js
+```
+
+O script copia o CSS (minificado) para `index.html`, `index-modelo.html` e `politica-de-privacidade.html`. Não edite o bloco `<style>` dentro dos HTML: ele é sobrescrito.
+As fontes (Fraunces e Manrope, licença OFL) ficam em `fonts/`.
+
 # Pendências: o que a profissional precisa enviar
 
 ## Dados

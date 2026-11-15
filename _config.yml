@@ -3,3 +3,4 @@
 exclude:
   - index-modelo.html
   - PENDENCIAS.md
+  - build.js
