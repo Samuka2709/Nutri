@@ -26,7 +26,7 @@
   /* Paleta da marca */
   --off: #FAF9F5;          /* fundo principal */
   --bege: #E8E1D3;         /* seções alternadas, molduras, formas */
-  --bege-claro: #F2EEE6;   /* tom intermediário para alternância */
+  --bege-claro: #EDE6D9;   /* tom intermediário para alternância */
   --salvia: #657B68;       /* identidade: botões, ícones, formas */
   --salvia-escuro: #55685A;/* hover */
   --salvia-texto: #4F6352; /* sálvia para texto pequeno (AA em off-white e bege) */
@@ -37,7 +37,7 @@
   --terracota-claro: #DFAE97; /* terracota sobre fundo escuro */
 
   --texto: var(--verde);
-  --texto-suave: #59605A;
+  --texto-suave: #4D544E;
   --linha: rgba(48, 55, 47, .14);
   --erro: #9A3A26;
 
@@ -417,7 +417,7 @@ main:focus { outline: none; }
   position: absolute; z-index: -1;
   inset: 0 0 auto 0;
   height: calc(var(--header-h) + 50svh);
-  background: var(--bege-claro);
+  background: var(--bege);
   border-radius: 0 0 50% 50% / 0 0 14% 14%;
 }
 .hero-grid {
@@ -540,6 +540,19 @@ main:focus { outline: none; }
 .section { padding-block: var(--section-y); }
 .section--tint { background: var(--bege-claro); }
 .section--bege { background: var(--bege); }
+
+/* Seções escuras: verde-escuro (Minha abordagem) e sálvia profundo (Conteúdos) */
+.section--escuro { background: var(--verde); color: var(--off); }
+.section--salvia { background: #46564A; color: var(--off); }
+:is(.section--escuro, .section--salvia) :focus-visible { outline-color: var(--terracota-claro); }
+:is(.section--escuro, .section--salvia) .eyebrow { color: #C3D2C3; }
+:is(.section--escuro, .section--salvia) .h2 em { color: var(--terracota-claro); }
+:is(.section--escuro, .section--salvia) .section-lead { color: rgba(250, 249, 245, .8); }
+.section--escuro .pillars li { border-color: rgba(250, 249, 245, .14); }
+.section--escuro .pillars .icon { color: #B9C9B9; }
+.section--escuro .pillars p { color: rgba(250, 249, 245, .72); }
+.section--escuro .approach-frame { background: #3A4239; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .55); }
+.section--salvia .post-card { color: var(--texto); box-shadow: 0 24px 50px -30px rgba(0, 0, 0, .5); }
 .section-head { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .section-lead {
   margin-top: 1.1rem;
