@@ -37,10 +37,39 @@ const CONFIG = {
   });
 
   /* ---------- Header: estado ao rolar ---------- */
+  /* Um único ouvinte de rolagem, limitado a um quadro por vez (requestAnimationFrame).
+     As tarefas que dependem da rolagem entram em scrollTasks. */
   const header = document.querySelector('.site-header');
-  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
-  requestAnimationFrame(onScroll); // lê a rolagem no próximo quadro (evita recálculo forçado de layout)
+  const scrollTasks = [];
+  let ticking = false;
+  const runScroll = () => {
+    ticking = false;
+    const y = window.scrollY;
+    scrollTasks.forEach((task) => task(y));
+  };
+  const onScroll = () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(runScroll); }
+  };
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Altura rolável em cache: medida só quando a página muda de tamanho, nunca a cada rolagem
+  let maxScroll = 0;
+  const measure = () => {
+    maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    onScroll();
+  };
+  if ('ResizeObserver' in window) new ResizeObserver(measure).observe(document.body);
+  window.addEventListener('resize', measure, { passive: true });
+  requestAnimationFrame(measure);
+
+  let scrolledState = null;
+  scrollTasks.push((y) => {
+    const scrolled = y > 24;
+    if (scrolled !== scrolledState) { // só mexe no DOM quando o estado muda
+      scrolledState = scrolled;
+      header.classList.toggle('is-scrolled', scrolled);
+    }
+  });
 
   /* ---------- Menu mobile ---------- */
   const nav = document.querySelector('.nav');
@@ -108,10 +137,7 @@ const CONFIG = {
     tracked.forEach((s) => spy.observe(s));
   }
   // No fim da página (rodapé), a última seção do menu fica ativa
-  window.addEventListener('scroll', () => {
-    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
-    if (atBottom) setActive('contato');
-  }, { passive: true });
+  scrollTasks.push((y) => { if (maxScroll > 0 && y >= maxScroll - 8) setActive('contato'); });
 
   /* ---------- Revelação suave na rolagem (uma única vez) ---------- */
   // Grupos em cascata: cada filho recebe seu índice (--i) para o atraso
@@ -279,17 +305,10 @@ const CONFIG = {
   /* ---------- Barra de progresso de leitura ---------- */
   const bar = document.querySelector(".scroll-progress");
   if (bar) {
-    let ticking = false;
-    const paint = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
-      ticking = false;
-    };
-    window.addEventListener("scroll", () => {
-      if (!ticking) { ticking = true; requestAnimationFrame(paint); }
-    }, { passive: true });
-    window.addEventListener("resize", () => requestAnimationFrame(paint));
-    requestAnimationFrame(paint);
+    scrollTasks.push((y) => {
+      bar.style.transform = `scaleX(${maxScroll > 0 ? Math.min(y / maxScroll, 1) : 0})`;
+    });
+    onScroll();
   }
 
   /* ---------- Ano atual no rodapé ---------- */

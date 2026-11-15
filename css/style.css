@@ -96,7 +96,9 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: hidden; /* navegadores antigos */
+  overflow-x: clip;   /* corta sem criar área de rolagem extra (rolagem mais fluida no iPhone) */
+  -webkit-tap-highlight-color: transparent;
 }
 body.nav-open { overflow: hidden; }
 
@@ -251,20 +253,27 @@ main:focus { outline: none; }
 /* ---------- 4. HEADER ---------- */
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 40;
-  transition: background-color .35s var(--ease), box-shadow .35s var(--ease), backdrop-filter .35s;
+  transition: background-color .3s ease, box-shadow .3s ease;
 }
 .header-inner {
   display: flex; align-items: center; gap: 1rem;
   height: var(--header-h);
-  transition: height .35s var(--ease);
 }
+/* Celular/toque: fundo sólido, sem desfoque e sem mudar de altura (rolagem mais leve) */
 .site-header.is-scrolled {
-  background: rgba(250, 249, 245, .86);
-  -webkit-backdrop-filter: saturate(140%) blur(14px);
-  backdrop-filter: saturate(140%) blur(14px);
+  background: rgba(250, 249, 245, .97);
   box-shadow: 0 1px 0 var(--linha), 0 10px 30px -22px rgba(48, 55, 47, .35);
 }
-.site-header.is-scrolled .header-inner { height: calc(var(--header-h) - 14px); }
+/* Desktop com mouse: vidro fosco e header que encolhe levemente */
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .header-inner { transition: height .3s var(--ease); }
+  .site-header.is-scrolled {
+    background: rgba(250, 249, 245, .86);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    backdrop-filter: saturate(140%) blur(14px);
+  }
+  .site-header.is-scrolled .header-inner { height: calc(var(--header-h) - 14px); }
+}
 
 .brand {
   display: flex; align-items: center; gap: .75rem;
@@ -1041,7 +1050,10 @@ body.nav-open .wa-float { opacity: 0; visibility: hidden; }
 .curve-bottom::after { bottom: -1px; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
 .curve-top > .container, .curve-bottom > .container { position: relative; z-index: 1; }
 
-/* Textura de papel, bem sutil */
+/* Textura de papel, bem sutil (só em telas grandes com mouse: no celular é quase invisível e pesa na rolagem) */
+@media (max-width: 1023px), (hover: none) {
+  body::after { display: none; }
+}
 body::after {
   content: ""; position: fixed; inset: 0; z-index: 90;
   pointer-events: none;
