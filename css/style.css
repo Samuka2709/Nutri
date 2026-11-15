@@ -758,8 +758,14 @@ main:focus { outline: none; }
 }
 .post-cat { font-size: var(--fs-small); font-weight: 600; color: var(--salvia-texto); }
 .post-body h3 { font-family: var(--serif); font-weight: 450; font-size: 1.35rem; }
-.post-body > p:not(.post-flag):not(.post-cat) { font-size: .95rem; color: var(--texto-suave); }
+.post-body > p:not(.post-flag):not(.post-cat):not(.post-soon) { font-size: .95rem; color: var(--texto-suave); }
 .post-body .text-link { margin-top: auto; }
+.post-soon {
+  margin-top: auto; padding-top: .75rem;
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: var(--fs-small); font-weight: 600; color: var(--salvia-texto);
+}
+.post-soon::before { content: ""; width: 18px; height: 1.5px; background: var(--terracota); }
 
 @media (min-width: 768px) { .posts { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .posts { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }

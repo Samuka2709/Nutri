@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FAF9F5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Manrope:wght@400;600&display=swap">
+  <!-- Estilos embutidos: esta página pode ser aberta em qualquer endereço do site,
+       então não depende de caminhos relativos para css/ e img/. -->
+  <style>
+    :root { --off: #FAF9F5; --bege-claro: #F2EEE6; --salvia: #657B68; --salvia-escuro: #55685A; --salvia-texto: #4F6352; --verde: #30372F; --terracota: #BD846B; --terracota-texto: #A26A52; --suave: #59605A; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100svh;
+      display: grid; place-items: center;
+      padding: 2rem 16px;
+      background: var(--off); color: var(--verde);
+      font-family: Manrope, system-ui, sans-serif; line-height: 1.65;
+      text-align: center;
+    }
+    main { max-width: 34rem; display: grid; justify-items: center; }
+    .arch {
+      width: 132px; height: 164px; margin-bottom: 2rem;
+      display: grid; place-items: center;
+      border-radius: 999px 999px 18px 18px;
+      background: var(--bege-claro);
+      font-family: Fraunces, Georgia, serif; font-size: 2.6rem; font-weight: 300;
+      color: var(--terracota-texto);
+    }
+    h1 {
+      margin: 0;
+      font-family: Fraunces, Georgia, serif; font-weight: 400;
+      font-size: clamp(2rem, 1.4rem + 3vw, 3rem); line-height: 1.1; letter-spacing: -.015em;
+      text-wrap: balance;
+    }
+    h1 em { font-style: italic; font-weight: 350; color: var(--terracota-texto); }
+    p { margin: 1.1rem 0 2rem; color: var(--suave); }
+    a {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 52px; padding: .75rem 1.6rem;
+      border-radius: 999px;
+      background: var(--salvia); color: #fff;
+      font-weight: 600; text-decoration: none;
+      transition: background-color .2s ease, transform .16s cubic-bezier(.23, 1, .32, 1);
+    }
+    a:hover { background: var(--salvia-escuro); }
+    a:active { transform: scale(.97); }
+    a:focus-visible { outline: 2px solid var(--salvia-texto); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="arch" aria-hidden="true">404</div>
+    <h1>Esta página <em>não existe.</em></h1>
+    <p>O endereço pode ter mudado ou ter sido digitado errado.</p>
+    <a id="home" href="/">Voltar ao início</a>
+  </main>
+  <script>
+    // Funciona tanto no GitHub Pages (/Nutri/) quanto na Vercel (/)
+    var base = location.pathname.indexOf('/Nutri/') === 0 ? '/Nutri/' : '/';
+    document.getElementById('home').href = base;
+  </script>
+</body>
+</html>

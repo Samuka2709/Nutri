@@ -1,0 +1,5 @@
+# Vercel: arquivos que ficam no repositório mas NÃO são publicados.
+index-modelo.html
+PENDENCIAS.md
+_config.yml
+.claude

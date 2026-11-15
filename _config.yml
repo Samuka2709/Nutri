@@ -1,0 +1,5 @@
+# GitHub Pages: arquivos que ficam no repositório mas NÃO são publicados.
+# (Pastas e arquivos que começam com "." ou "_" já são ignorados.)
+exclude:
+  - index-modelo.html
+  - PENDENCIAS.md

@@ -9,7 +9,7 @@ Não publique a demo como se fosse o site de uma profissional real.
 
 ## Ao fechar com uma cliente real
 
-1. Use `index-modelo.html`, que é a mesma página com todos os dados marcados como `[PREENCHER: ...]`. Renomeie para `index.html` e remova a linha `<meta name="robots" content="noindex">`.
+1. Use `index-modelo.html`, que é a mesma página com todos os dados marcados como `[PREENCHER: ...]`. Ele fica no repositório, mas não é publicado: está excluído em `_config.yml` (GitHub Pages) e em `.vercelignore` (Vercel), assim como este arquivo. Renomeie para `index.html` e remova a linha `<meta name="robots" content="noindex">`.
 2. Preencha os itens abaixo. Para achá-los, busque por **PREENCHER** em `index.html`, `politica-de-privacidade.html` e `js/main.js`.
    Na tela, os marcadores aparecem com fundo terracota claro (classe `.fill`). Ao preencher, troque o `<span class="fill">[...]</span>` pelo texto real.
 3. Troque todas as fotos pelas fotos reais da profissional.
