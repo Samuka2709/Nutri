@@ -39,7 +39,7 @@ const CONFIG = {
   /* ---------- Header: estado ao rolar ---------- */
   const header = document.querySelector('.site-header');
   const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
-  onScroll();
+  requestAnimationFrame(onScroll); // lê a rolagem no próximo quadro (evita recálculo forçado de layout)
   window.addEventListener('scroll', onScroll, { passive: true });
 
   /* ---------- Menu mobile ---------- */
@@ -255,8 +255,8 @@ const CONFIG = {
     window.addEventListener("scroll", () => {
       if (!ticking) { ticking = true; requestAnimationFrame(paint); }
     }, { passive: true });
-    window.addEventListener("resize", paint);
-    paint();
+    window.addEventListener("resize", () => requestAnimationFrame(paint));
+    requestAnimationFrame(paint);
   }
 
   /* ---------- Ano atual no rodapé ---------- */

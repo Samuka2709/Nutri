@@ -39,7 +39,9 @@
   <!-- Fontes: Fraunces (títulos) + Manrope (textos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400;500;600;700&display=swap">
+  <!-- Fontes carregadas sem bloquear a primeira pintura (o texto aparece já com a fonte do sistema) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
 
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js');</script>
@@ -200,12 +202,12 @@
                 <source type="image/webp" srcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w" sizes="(min-width: 1024px) 38vw, 80vw">
                 -->
                 <!-- FOTO DE EXEMPLO (Unsplash) — substituir pela foto real da profissional [PREENCHER: foto] -->
-                <img src="https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=800&h=1000" srcset="https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=480&ar=4:5 480w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=800&ar=4:5 800w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=1200&ar=4:5 1200w" sizes="(min-width: 1024px) 544px, 76vw" width="800" height="1000" fetchpriority="high" alt="Foto de Marina Alves, nutricionista">
+                <img src="https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=800&h=1000" srcset="https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=360&ar=4:5 360w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=480&ar=4:5 480w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=600&ar=4:5 600w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=800&ar=4:5 800w, https://images.unsplash.com/photo-1706565029882-6f25f1d9af65?auto=format&fit=crop&q=70&w=1100&ar=4:5 1100w" sizes="(min-width: 1024px) 544px, (min-width: 768px) 480px, 72vw" width="800" height="1000" fetchpriority="high" alt="Foto de Marina Alves, nutricionista">
               </picture>
             </figure>
             <!-- Imagem pequena de alimento (opcional) [PREENCHER: foto] -->
             <div class="hero-bowl" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=300&h=300" srcset="https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=300&h=300 300w, https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=600&h=600 600w" sizes="160px" width="300" height="300" alt="">
+              <img src="https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=300&h=300" srcset="https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=120&h=120 120w, https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=200&h=200 200w, https://images.unsplash.com/photo-1778690103044-88ad0e274e32?auto=format&fit=crop&q=70&w=300&h=300 300w" sizes="(min-width: 1024px) 140px, (min-width: 768px) 125px, 80px" width="300" height="300" alt="">
             </div>
             <div class="hero-card">
               <span class="hero-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
